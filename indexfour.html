@@ -28,23 +28,14 @@
 </head>
 <body>
 	<div ng-controller="SampleAppCtrl">
-		<h3 class="panel-header">Items</h3>
 
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Value</th>
-				</tr>
-			</thead>
+		<h3 class="panel-header">List</h3>
 
-			<tbody>
-				<tr ng-repeat="item in items">
-					<td>{{item.name}}</td>
-					<td>{{item.value}}</td>
-				</tr>
-			</tbody>
-		</table>
+		<p ng-repeat="item in items">
+
+			<span ng-repeat="property in item">{{property}}, </span>
+
+		</p>
 	</div>
 </body>
 </html>
